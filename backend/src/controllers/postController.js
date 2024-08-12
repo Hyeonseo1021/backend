@@ -1,5 +1,5 @@
 const path = require('path');
-const Post = require('../models/Post');
+const Post = require('../models/post');
 
 // 게시물 생성
 exports.createPost = async (req, res) => {
