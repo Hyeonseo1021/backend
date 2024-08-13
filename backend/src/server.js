@@ -36,9 +36,6 @@ try {
 app.use(boardRoutes);
 app.use(memberRoutes);
 
-app.get('/', (req, res) => {
-    res.send("hello world");
-});
 
 app.get('*', (req, res) => {
     res.sendFile(path.join(buildPath, 'index.html'));
