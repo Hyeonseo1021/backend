@@ -3,7 +3,7 @@ const path = require('path');
 const multer = require('multer');
 const router = express.Router();
 const postController = require('../controllers/postController');
-const commentController = require('../controllers/commentController');
+
 
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
@@ -37,10 +37,6 @@ router.get('/board', postController.getAllPosts);
 router.put('/board/:id', upload.single('image'), postController.updatePost);
 router.delete('/board/:id', postController.deletePost);
 
-// comment
-router.post('/comment', commentController.listComments);
-router.get('/comment', commentController.createComment);
-router.put('/comment/:id', commentController.updateComment);
-router.delete('/comment/:id', commentController.deleteComment);
+
 
 module.exports = router;
