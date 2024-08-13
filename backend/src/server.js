@@ -35,6 +35,10 @@ try {
 
 app.use(boardRoutes);
 
+app.get('/', (req, res) => {
+  res.send('Hello World'); // 테스트
+});
+
 //app.get('*', (req, res) => {
 //    res.sendFile(path.join(buildPath, 'index.html'));
 //});
