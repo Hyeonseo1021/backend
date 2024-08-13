@@ -5,7 +5,7 @@ const path = require('path');
 const bodyParser = require('body-parser');
 const axios = require('axios');
 const boardRoutes = require('./routes/boardRoutes');
-const memberRoutes = require('./routes/memberRoutes');
+
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -34,8 +34,6 @@ try {
 }
 
 app.use(boardRoutes);
-app.use(memberRoutes);
-
 
 app.get('*', (req, res) => {
     res.sendFile(path.join(buildPath, 'index.html'));
