@@ -16,8 +16,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
-const buildPath = path.join(__dirname, '/../../frontend/build');
-app.use(express.static(buildPath));
+//const buildPath = path.join(__dirname, '/../../frontend/build');
+//app.use(express.static(buildPath));
 
 
 // MongoDB 연결
