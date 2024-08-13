@@ -35,9 +35,9 @@ try {
 
 app.use(boardRoutes);
 
-app.get('*', (req, res) => {
-    res.sendFile(path.join(buildPath, 'index.html'));
-});
+//app.get('*', (req, res) => {
+//    res.sendFile(path.join(buildPath, 'index.html'));
+//});
 
 app.listen(PORT, function(){
     console.log(`Listening on http://localhost:${PORT}`);
