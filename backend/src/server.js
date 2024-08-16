@@ -16,8 +16,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
-//const buildPath = path.join(__dirname, '/../../frontend/build');
-//app.use(express.static(buildPath));
+
 
 
 // MongoDB 연결
@@ -35,9 +34,7 @@ try {
 
 app.use(boardRoutes);
 
-app.get('/', (req, res) => {
-  res.send('Hello World'); // 테스트
-});
+
 
 //app.get('*', (req, res) => {
 //    res.sendFile(path.join(buildPath, 'index.html'));
