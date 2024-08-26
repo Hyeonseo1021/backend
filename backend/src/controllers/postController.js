@@ -4,7 +4,7 @@ const Post = require('../models/post');
 // 게시물 생성
 exports.createPost = async (req, res) => {
     try {
-        const imageUrl = req.file ? `/uploads/${req.file.filename}` : null;
+        const imageUrl = req.file ? `uploads/${req.file.filename}` : null;
         const newPost = new Post({
             title: req.body.title,
             content: req.body.content,
