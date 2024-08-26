@@ -1,14 +1,18 @@
+
 const express = require('express');
 const path = require('path');
+const fs = require('fs');
 const multer = require('multer');
 const router = express.Router();
 const postController = require('../controllers/postController');
 
-
+// uploads 폴더가 없으면 생성
 const uploadDir = path.join(__dirname, '..', 'uploads');
 if (!fs.existsSync(uploadDir)) {
     fs.mkdirSync(uploadDir, { recursive: true });
 }
+
+
 
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
